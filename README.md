@@ -16,6 +16,9 @@ NPM: `npm install mobx-utils --save`
 
 CDN: <https://unpkg.com/mobx-utils/mobx-utils.umd.js>
 
+# Usage
+`import {function} from 'mobx-utils'`
+
 # API
 
 ## fromPromise
@@ -44,7 +47,7 @@ const fetchResult = fromPromise(fetch("http://someurl"))
 
 // combine with when..
 when(
-  () => fetchResult.state !== "pending"
+  () => fetchResult.state !== "pending",
   () => {
     console.log("Got ", fetchResult.value)
   }
